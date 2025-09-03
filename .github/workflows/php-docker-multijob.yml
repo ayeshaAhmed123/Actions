@@ -5,6 +5,7 @@ on:
     - main 
    paths: 
     - 'php/**'
+  workflow_dispatch:
 jobs:
    build-img:
       environment: dev
