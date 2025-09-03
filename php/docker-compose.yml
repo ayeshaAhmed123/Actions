@@ -1,0 +1,46 @@
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: ./nginx-redirect/Dockerfile
+    image: blognginx_combined:latest
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx-redirect/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - php-app
+    networks:
+      - blog-net
+  php-app:
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    image: blogdev_nginxcomphp:latest
+    expose: 
+      - "9000"
+      - "81"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - redis
+    networks:
+      - blog-net
+    restart: always
+  redis:
+    image: redis:alpine
+    container_name: laravel-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - blog-net
+    restart: always
+volumes:
+  redis-data:
+
+networks:
+  blog-net:
+

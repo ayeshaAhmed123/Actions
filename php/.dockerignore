@@ -1,0 +1,12 @@
+mysqlserver-docker
+nginx-redirect
+vendor
+tests/
+*.log
+*.sqlite
+.DS_Store
+.idea
+.vscode
+docker-compose.yml
+Dockerfile
+*.md
