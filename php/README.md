@@ -12,7 +12,7 @@ This is a Blog Development Tutorial Series on Youtube. This project is made by <
 - Laravel v7.0
 - Frontend Template [(MiniBlog by Colorlib)](https://colorlib.com/wp/template/miniblog/)
 - Admin Template [(Admin LTE 3)](https://adminlte.io/themes/dev/AdminLTE/index.html)
-asodosoudv
+
 
 #### Frontend Screenshot
 ![Frontend Screenshot](public/img/frontend.png)
