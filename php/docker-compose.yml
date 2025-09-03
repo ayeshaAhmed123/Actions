@@ -14,10 +14,12 @@ services:
     networks:
       - blog-net
   php-app:
-    build: 
-      context: .
-      dockerfile: ./Dockerfile
-    image: blogdev_nginxcomphp:latest
+    # build: 
+    #   context: .
+    #   dockerfile: ./Dockerfile
+    image: ayeshaahmed123/php-blog:latest
+    env_file:
+      - ./.env
     expose: 
       - "9000"
       - "81"
