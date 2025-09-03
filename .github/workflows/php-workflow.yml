@@ -18,13 +18,13 @@ jobs:
     - name: Install PHP Dependencies with Composer
       run: |
         echo "Installing Composer dependencies..."
-        cd php-app/ 
+        cd php/ 
         composer install 
     
     - name: Create Build Artifact
       run: |
         echo "Creating build artifact..."
-        tar -czf php-app-build.tar.gz php-app/
+        tar -czf php-app-build.tar.gz php/
 
     - name: Upload Build Artifact
       uses: actions/upload-artifact@v4
