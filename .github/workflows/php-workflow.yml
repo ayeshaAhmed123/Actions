@@ -5,7 +5,9 @@ on:
       - main
     paths: 
       - 'php/**'
-
+  workflow_dispatch:
+env: 
+  ACTIONS_STEP_DEBUG: true     
 jobs:
   php-build:
     runs-on: [Ubuntu-latest]

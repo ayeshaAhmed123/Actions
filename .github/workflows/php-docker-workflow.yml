@@ -6,9 +6,11 @@ on:
       - main
     paths:
       - "php/**"
+
 jobs:
   php-docker-build:
     runs-on: Ubuntu-latest
+
     steps:
     - name: Checkout
       uses: actions/checkout@v4    
