@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: acitons/checkout@v4
+      uses: actions/checkout@v4
     - name: Terraform Download
       uses: hashicorp/setup-terraform@v3
       with:
